@@ -1,8 +1,14 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.BeforeClass;
 import org.junit.Ignore;
 
 public class AritmeticaTest {
+    
+    @BeforeClass
+    public static void setUpClass(){
+        Aritmetica a = new Aritmetica();
+    }
 
     @Test
     public void testSuma() {
@@ -39,6 +45,7 @@ public class AritmeticaTest {
         assertEquals("División ( 0,-3) debe ser    0",     0, Aritmetica.division( 0,-3), 0.001);
         assertEquals("División (-3,-3) debe ser    1",     1, Aritmetica.division(-3,-3), 0.001);
     }
+    
 
 }
 
